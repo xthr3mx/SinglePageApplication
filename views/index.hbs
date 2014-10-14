@@ -1,0 +1,45 @@
+<div class="container">
+	<div class="jumbotron text-center">
+		<h1>Number of products 
+			<span class="label label-info">{[{products.length}]}</span>
+		</h1>
+	</div>
+
+	<h4>List products...</h4>
+	<div id="todo-list" class="row">
+		<div class="col-sm-4 col-sm-offset-4">
+			<div class="checkbox" ng-repeat="product in products">
+				<div class="student-data">
+					<label>Name:</label>
+					<label>{[{product.name}]}</label>
+				</div>
+				<div class="student-data">
+					<label>Description:</label>
+					<label>{[{product.description}]}</label>
+				</div>
+				<hr>
+			</div>
+		</div>
+	</div>
+
+	<hr>
+
+	<h4>Add new product...</h4>
+	<!-- Insert new product -->
+	<div id="todo-form" class="row">
+		<div class="col-sm-8 col-sm-offset-2 text-center">
+			<form>
+				<div class="form-group">
+					<input type="text" class="form-control input-lg text-center" placeholder="Insert name" ng-model="product.name">
+				</div>
+				<div class="form-group">
+					<input type="text" class="form-control input-lg text-center" placeholder="Insert description" ng-model="product.description">
+				</div>
+				<div class="form-group">
+					<button id="save" class="btn btn-primary btn-lg" ng-click="addProduct()">Save</button>
+				</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
